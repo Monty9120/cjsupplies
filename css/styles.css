@@ -50,7 +50,8 @@
         border: 1px lightsteelblue solid; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto'; }
 
 p {
   font-family: Roboto; }
@@ -65,7 +66,8 @@ h1 {
   font-size: 50px;
   color: lightsteelblue;
   font-family: 'Righteous', cursive;
-  background-color: #222;
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
+  background: linear-gradient(90deg, #222, #333);
   padding: 5px;
   margin-top: 0;
   text-align: center;
@@ -78,7 +80,7 @@ h2 {
 #hero {
   position: relative;
   padding-top: 82.8px;
-  background-image: url("/img/office.jpeg");
+  background-image: url("../img/office.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,7 +97,7 @@ h2 {
     top: 50%;
     -webkit-transform: translate(-50%, -60%);
     transform: translate(-50%, -60%);
-    background-color: rgba(100, 100, 100, 0.6);
+    background: rgba(100, 100, 100, 0.6);
     /*box-shadow: 6px 10px 10px 0px rgba(199,199,199,0.5);*/
     text-shadow: 2px 2px black; }
 
@@ -114,7 +116,8 @@ h2 {
   font-size: 20px; }
 
 #about .textbox {
-  background-color: #222;
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
+  background: linear-gradient(90deg, #222, #333);
   color: #eee;
   padding: 1em;
   text-align: center; }
@@ -152,6 +155,18 @@ h2 {
       padding-top: 10px;
       color: #c80064; }
 
+#contact {
+  font-family: 'Roboto', cursive;
+  text-align: center;
+  position: relative; }
+  #contact ul {
+    list-style-type: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
 .nav {
   width: 100%;
   height: 100px;
@@ -173,6 +188,8 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     height: 100%; }
+    .nav .nav-content i {
+      display: none; }
     .nav .nav-content .logo {
       background-color: white;
       width: 100px;
@@ -195,3 +212,45 @@ h2 {
       color: white; }
       .nav .nav-content a:hover {
         color: lightsteelblue; }
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 30px; }
+  .nav .nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%; }
+    .nav .nav-content i {
+      font-size: 2em;
+      margin: 1em; }
+    .nav .nav-content .logo {
+      background-color: white;
+      width: 100px;
+      height: 100px; }
+  .nav ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
+    background: linear-gradient(90deg, #222, #333);
+    /*transform: translateY(-100px);*/
+    z-index: -1; }
+    .nav ul li {
+      padding: 1em; }
+  .nav a {
+    color: white; }
+    .nav a:hover {
+      color: lightsteelblue; }
+  #hero .title {
+    font-size: 60px; } }

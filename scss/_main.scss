@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+	font-family: 'Roboto'
 	
 	
 }
@@ -16,7 +17,7 @@ h1{
 	font-size: 50px;
 	color:$secondary;
 	font-family: 'Righteous', cursive;
-	background-color: $primary;
+	background: $gradient2;
 	padding: 5px;
 	margin-top: 0;
 	text-align: center;
@@ -46,7 +47,7 @@ h2{
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-60%);
-		background-color: rgba(100,100,100,0.6);
+		background: rgba(100,100,100,0.6);
 		/*box-shadow: 6px 10px 10px 0px rgba(199,199,199,0.5);*/
 		text-shadow: 2px 2px black;
 
@@ -71,7 +72,7 @@ h2{
 		font-size: 20px;
 	}
 	.textbox{
-		background-color: #222;
+		background:$gradient2;
 		color: #eee;
 		padding: 1em;
 		text-align: center;
@@ -110,5 +111,18 @@ h2{
 
 
 		}
+	}
+}
+
+#contact{
+	font-family: 'Roboto', cursive;
+	text-align: center;
+	position: relative;
+	ul{
+		list-style-type: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
 	}
 }
