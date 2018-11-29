@@ -1,5 +1,4 @@
 
-
 @media only screen and (max-width: 700px) {
 	h1{
 		font-size: 30px;
@@ -7,16 +6,20 @@
 	div{
 	}
 
-
+		/*NAV	-	-	-	-	-	-	-	-	-*/
 	.nav{
 	.nav-content{
 		display: flex;
 		justify-content: space-between;
 		height: 100%;
+		position: relative;
+		z-index: 100;
 
 		i{
 			font-size: 2em;
 			margin: 1em;
+			display: block;
+			z-index: 100;
 		}
 
 		.logo{
@@ -25,21 +28,27 @@
 			height: 100px;
 		}
 
-	}
-
-	ul{
+		ul{
 		list-style-type: none;
+		position: absolute;
+		transition: all ease 1s;
+		z-index: 0;
+		top: 100px;
 		display: flex;
+		flex-direction: column;
 		justify-content: flex-end;
 		margin: 0;
 		padding: 0;
+		padding-right: 0;
 		width: 100%;
 		background:linear-gradient(90deg, #222, #333);
-		/*transform: translateY(-100px);*/
-		z-index: -1;
+		transform: translateX(300px);	
+		/*z-index: -1;*/
+		opacity: 0;
+
 
 			li{ 
-				padding: 1em;
+				padding: 0;
 			}
 		}
 
@@ -47,17 +56,67 @@
 			color: white;
 
 			&:hover{
-				color:$secondary;
+				color:$pop;
 			}
 		}
-}
+
+	}
+
+
+
+	}
+	/*-	-	-	-	-	-	-	-*/
+
 
 
 	#hero{
 
 		.title{
 			font-size: 60px;
+			width: 95%;
+
+			left: 0%;
 
 		}
+	}
+
+
+	#about{
+
+		.textbox{
+			padding: 0;
+			p{
+				width: 100%;
+			}
+		}
+		.threecol{
+			.a-item{
+				flex: 1 0 90%;
+			}
+		}
+	}
+
+	#products{
+		.wrap{
+			margin: 0;
+		}
+		.product{
+			flex-direction: column;
+		
+
+			.p-heading{
+				.p-image{
+					height: 200px;
+				}
+			}
+		}
+	}
+	#contact{
+		height: auto;
+		.contact-list{
+			font-size: 1em;
+			width: 100%;
+		}
+		
 	}
 }
