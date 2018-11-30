@@ -1,3 +1,12 @@
+
+
+.fa-bars{
+	transition: all ease 0.4s;
+}
+.fa-times{
+	transition: all ease 0.4s;	
+}
+
 body{
 	margin: 0;
 	font-family: 'Roboto','Arial'
@@ -36,22 +45,50 @@ h2{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	// .title{
+	// 	font-size: 100px;
+	// 	width: 80%;
+	// 	text-align: center;
+	// 	color: white;
+	// 	margin: 0;
+	// 	padding: 1rem;
+	// 	position: absolute;
+	// 	left: 4%;
+	// 	top: 20%;
+	// 	opacity: 0;
+	// 	background: rgba(100,100,100,0.6);
+
+	// 	text-shadow: 2px 2px black;
+
+
+	// }
+
 	.title{
-		font-size: 100px;
-		width: 90%;
-		text-align: center;
-		color: white;
-		margin: 0;
-		padding: 1rem;
-		position: absolute;
-		left: 4%;
-		top: 20%;
-		opacity: 0;
-		background: rgba(100,100,100,0.6);
-		/*box-shadow: 6px 10px 10px 0px rgba(199,199,199,0.5);*/
-		text-shadow: 2px 2px black;
+	  width: 740px;
+	  overflow: hidden; 
+	  border-right: .15em solid orange; 
+	  white-space: nowrap;
+	  margin: 0 auto; 
+	  letter-spacing: .15em; 
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  transform: translate(-50%, -50%);
+	  animation: 
+    	typing 3.5s steps(40, end),
+	    blink-caret .75s step-end infinite;
+	}
 
+	/* The typing effect */
+	@keyframes typing {
+	  from { width: 0 }
+	  to { width: 740px }
+	}
 
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: $pop; }
 	}
 }
 

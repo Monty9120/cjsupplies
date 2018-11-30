@@ -86,7 +86,6 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .products .product {
-    /*border:thin grey solid;*/
     margin: 1em;
     text-align: center;
     -webkit-box-shadow: 0px 2px 10px 0px rgba(100, 100, 100, 0.75);
@@ -109,7 +108,10 @@
       flex-direction: column;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 37%;
+      flex: 0 0 37%; }
       .products .product .p-heading .p-image {
         background-image: url("../img/rolls.jpg");
         background-size: cover;
@@ -149,6 +151,14 @@
         border-radius: 10px;
         border: 1px #003366 solid; }
 
+.fa-bars {
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s; }
+
+.fa-times {
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s; }
+
 body {
   margin: 0;
   font-family: 'Roboto','Arial'; }
@@ -184,21 +194,47 @@ h2 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  /* The typing effect */
+  /* The typewriter cursor effect */ }
   #hero .title {
-    font-size: 100px;
-    width: 90%;
-    text-align: center;
-    color: white;
-    margin: 0;
-    padding: 1rem;
+    width: 740px;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     position: absolute;
-    left: 4%;
-    top: 20%;
-    opacity: 0;
-    background: rgba(100, 100, 100, 0.6);
-    /*box-shadow: 6px 10px 10px 0px rgba(199,199,199,0.5);*/
-    text-shadow: 2px 2px black; }
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+
+@-webkit-keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 740px; } }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 740px; } }
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #c80064; } }
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #c80064; } }
 
 #about h2 {
   font-size: 30px;
@@ -301,7 +337,8 @@ h2 {
       font-size: 2em;
       margin: 1em;
       display: block;
-      z-index: 100; }
+      z-index: 100;
+      line-height: 0; }
     .nav .nav-content .logo {
       background-color: white;
       width: 100px;
@@ -329,21 +366,31 @@ h2 {
       width: 100%;
       background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
       background: linear-gradient(90deg, #222, #333);
-      -webkit-transform: translateX(300px);
-      transform: translateX(300px);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
       /*z-index: -1;*/
       opacity: 0; }
       .nav .nav-content ul li {
-        padding: 0; }
+        padding: 0;
+        background-color: rgba(50, 50, 50, 0.9); }
     .nav .nav-content a {
       color: white; }
       .nav .nav-content a:hover {
         color: #c80064; }
   /*-	-	-	-	-	-	-	-*/
   #hero .title {
-    font-size: 60px;
-    width: 95%;
-    left: 0%; }
+    font-size: 20px;
+    width: 80%; }
+  @-webkit-keyframes typing {
+    from {
+      width: 0; }
+    to {
+      width: 79%; } }
+  @keyframes typing {
+    from {
+      width: 0; }
+    to {
+      width: 79%; } }
   #about .textbox {
     padding: 0; }
     #about .textbox p {
