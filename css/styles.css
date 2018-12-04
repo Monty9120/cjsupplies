@@ -22,6 +22,7 @@
 
 .nav {
   width: 100%;
+  font-family: 'Roboto',Serif;
   height: 100px;
   background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
   background: linear-gradient(90deg, #222, #333);
@@ -50,8 +51,12 @@
       transform: translate(0, -50%); }
     .nav .nav-content .logo {
       background-color: white;
+      background-position: center;
+      background-size: cover;
       width: 100px;
-      height: 100px; }
+      height: 100px;
+      -webkit-transition: all ease 0.4s;
+      transition: all ease 0.4s; }
     .nav .nav-content ul {
       list-style-type: none;
       display: -webkit-box;
@@ -99,6 +104,7 @@
     .products .product .p-heading {
       background: -webkit-gradient(linear, left top, right top, from(#003366), to(#003366));
       background: linear-gradient(90deg, #003366, #003366);
+      flex:1 0 30%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -108,10 +114,7 @@
       flex-direction: column;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 37%;
-      flex: 0 0 37%; }
+      justify-content: space-between; }
       .products .product .p-heading .p-image {
         background-image: url("../img/rolls.jpg");
         background-size: cover;
@@ -149,7 +152,8 @@
         -ms-flex: 1 0 30%;
         flex: 1 0 30%;
         border-radius: 10px;
-        border: 1px #003366 solid; }
+        border: 1px #003366 solid;
+        font-family: 'Roboto'; }
 
 .fa-bars {
   -webkit-transition: all ease 0.4s;
@@ -161,7 +165,8 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto','Arial'; }
+  background-color: #ffffff;
+  }
 
 p {
   font-family: Roboto; }
@@ -179,9 +184,9 @@ h1 {
   background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
   background: linear-gradient(90deg, #222, #333);
   padding: 5px;
-  margin-top: 0;
   text-align: center;
-  margin-bottom: 0;
+  margin:0;
+  margin-top: 68px;
   text-shadow: 2px 2px black; }
 
 h2 {
@@ -198,9 +203,8 @@ h2 {
   /* The typing effect */
   /* The typewriter cursor effect */ }
   #hero .title {
-    width: 740px;
     overflow: hidden;
-    border-right: .15em solid orange;
+    /*border-right: .15em solid orange; */
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .15em;
@@ -209,8 +213,11 @@ h2 {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+    /*    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;*/ }
+    #hero .title span {
+      margin: 0; }
 
 @-webkit-keyframes typing {
   from {
@@ -236,6 +243,9 @@ h2 {
   50% {
     border-color: #c80064; } }
 
+#about h1 {
+  margin-top: 0; }
+
 #about h2 {
   font-size: 30px;
   background: -webkit-gradient(linear, left top, right top, from(#003366), to(#003366));
@@ -248,7 +258,8 @@ h2 {
   letter-spacing: 1px; }
 
 #about p {
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: 100; }
 
 #about .textbox {
   background: -webkit-gradient(linear, left top, right top, from(#222), to(#333));
@@ -267,7 +278,7 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: 4em;
+  margin-top: 7%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -275,6 +286,7 @@ h2 {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 20%;
     flex: 1 0 20%;
+    background-color: white;
     margin: 1em;
     text-align: center;
     margin-top: 0;
@@ -283,7 +295,8 @@ h2 {
     box-shadow: 0px 2px 10px 0px rgba(100, 100, 100, 0.75);
     border-radius: 0px 0px 10px 10px; }
     #about .threecol .a-item p {
-      padding: 0 5px; }
+      padding: 5px;
+      font-weight: 00; }
     #about .threecol .a-item i {
       font-size: 4em;
       padding-top: 10px;
@@ -292,15 +305,33 @@ h2 {
 #contact {
   font-family: 'Roboto', cursive;
   text-align: center;
-  position: relative; }
+  position: relative;
+  font-weight: 100;
+ }
+  #contact .wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0; }
   #contact h2 {
     text-align: center;
-    color: #003366; }
+    color: #003366;
+    font-size: 2em; }
   #contact .contact-list {
     text-align: left;
     font-size: 2em;
-    width: 50%;
-    margin: auto; }
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     #contact .contact-list i {
       font-size: 2em;
       color: #003366;
@@ -317,12 +348,21 @@ h2 {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      text-align: center; }
+      text-align: center;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+      flex: 1 0 30%;
+      border: 1px #003366 solid;
+      border-radius: 150px;
+      padding: 1em;
+      background-color: white;
+      -webkit-box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.75);
+      box-shadow: 5px 5px 5px 0px rgba(200, 200, 200, 0.75); }
 
 @media only screen and (max-width: 700px) {
   h1 {
     font-size: 30px; }
-  /*NAV	-	-	-	-	-	-	-	-	-*/
+  /*NAV - - - - - - - - -*/
   .nav .nav-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -340,7 +380,6 @@ h2 {
       z-index: 100;
       line-height: 0; }
     .nav .nav-content .logo {
-      background-color: white;
       width: 100px;
       height: 100px; }
     .nav .nav-content ul {
@@ -377,7 +416,7 @@ h2 {
       color: white; }
       .nav .nav-content a:hover {
         color: #c80064; }
-  /*-	-	-	-	-	-	-	-*/
+  /*- - - - - - - -*/
   #hero .title {
     font-size: 20px;
     width: 80%; }
@@ -412,4 +451,8 @@ h2 {
     height: auto; }
     #contact .contact-list {
       font-size: 1em;
-      width: 100%; } }
+      width: 100%; }
+      #contact .contact-list div {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 90%;
+        flex: 1 0 90%; } }
